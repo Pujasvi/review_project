@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title> Let's review </title>
+
+<!-- Google fonts -->
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+
+<!-- font awesome -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- bootstrap -->
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+
+<!-- animate.css -->
+<link rel="stylesheet" href="assets/animate/animate.css" />
+<link rel="stylesheet" href="assets/animate/set.css" />
+
+<!-- gallery -->
+<link rel="stylesheet" href="assets/gallery/blueimp-gallery.min.css">
+
+<!-- favicon -->
+<link rel="shortcut icon" href="images/favicon2.ico" type="image/x-icon">
+<link rel="icon" href="images/favicon2.ico" type="image/x-icon">
+
+
+<link rel="stylesheet" href="assets/style.css">
+
+
+
+    <style>
+
+     .signup:hover{
+         background-color: white;
+
+     }
+        #box,#login{
+            overflow:auto;
+            z-index:1;
+            position: fixed;
+
+            display: none;
+height: 100%;
+ background-color: rgba(1,1,1,0.6);
+            width: 100%;
+        }
+        #signupid{
+            border:  1px solid  white;
+            /*height:600px;
+            */margin:  130px 400px ;
+           background-image:url("images/back.jpg");
+            background-size: contain;
+            border-radius: 10px;
+            width:40%;
+        }
+
+        .sp{
+            height:30px;
+            width: 40%;
+        }
+#box{
+    position: absolute;
+}
+     #loginid{
+        /* height:350px;
+         */width:350px;
+
+         background-image: url("images/back.jpg");
+         background-size:contain;
+
+
+
+
+         margin-left:1050px;
+         margin-top:0px;
+
+     }
+     #sbmit{
+         margin-left: 450px;
+     }
+     #sbmit2{
+         margin-left: 250px;
+     }
+
+     #close{
+            margin-top:20px ;
+            margin-left:400px;
+            position: relative;
+            background-color:white;
+            font-size: 30px;
+            width:30px ;
+            height:40px;
+        }
+        #close2{
+            z-index:5;
+            height:40px;
+            width:50px;
+           /* background-color:red;
+            */font-size:30px;
+            margin-left:250px ;
+            margin-top:100px;
+            color:black;
+        }
+
+     @media (max-width: 479px) {
+         #signupid{
+             margin-left:20px;
+             width:90%;
+
+         }
+         .sp{
+             width:80%
+         }
+         #close{
+             margin-left: 200px;
+         }
+         #sbmit{
+             margin-left: 100px;
+         }
+         #loginid{
+             margin-left: 0px;
+             width:90%;
+         }
+         #sbmit2{
+             margin-left: 100px;
+         }
+     }
+     @media (min-width: 479px) and (max-width: 767px) {
+
+         #signupid{
+             margin-left:20px;
+             width:60%;
+
+         }
+         .sp{
+             width:80%
+         }
+         #close{
+             margin-left: 300px;
+         }
+         #sbmit{
+             margin-left: 300px;
+         }
+         #loginid{
+             margin-left: 0px;
+             width:60%;
+         }
+         #sbmit2{
+             margin-left: 100px;
+         }
+     }
+
+     @media (min-width: 768px) and (max-width: 979px) {
+
+         #signupid{
+             margin-left:20px;
+             width:60%;
+
+         }
+         .sp{
+             width:80%
+         }
+         #close{
+             margin-left: 300px;
+         }
+         #sbmit{
+             margin-left: 300px;
+         }
+         #loginid{
+             margin-left: 0px;
+             width:40%;
+         }
+         #sbmit2{
+             margin-left: 100px;
+         }
+     }
+     @media (min-width: 980px) and (max-width: 1199px)
+     {
+
+         #signupid{
+             margin-left:20px;
+             width:60%;
+
+         }
+         .sp{
+             width:50%
+         }
+         #close{
+             margin-left: 500px;
+         }
+         #sbmit{
+             margin-left: 400px;
+         }
+         #loginid{
+             margin-left: 0px;
+             width:30%;
+         }
+         #sbmit2{
+             margin-left: 100px;
+         }
+     }
+
+         #close:hover{
+
+            background-color:black;
+            color:white;
+
+        }
+
+     #close2:hover{
+
+         background-color:black;
+         color:white;
+
+     }
+
+        #log:hover{
+            background-color: white;
+
+        }
+    </style>
+
+
+<script type="text/javascript" src="js/myjs.js"></script>
+    <script type="text/javascript" src="js/mob.js"></script>
+
+</head>
+
+<body>
+<div class="topbar animated fadeInLeftBig"></div>
+
+<!-- Header Starts -->
+<div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="top-nav">
+          <div class="container">
+            <div class="navbar-header">
+              <!-- Logo Starts -->
+              <a class="navbar-brand" href="#home"><img src="logo.png" alt="logo" style="margin-top:-70px ;margin-left:-100px"></a>
+              <!-- #Logo Ends -->
+
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+            </div>
+
+
+            <!-- Nav Starts -->
+            <div class="navbar-collapse  collapse">
+              <ul class="nav navbar-nav navbar-right scroll">
+                 <li class="active"><a href="#works">Home</a></li>
+                 <li ><a href="#about">About</a></li>
+                 <li ><a href="#partners">Latest reviews</a></li>
+                  <li  onclick="mb()" class="signup"><a >Sign-up</a>
+                  </li>
+                  <li  onclick="log1()" id="log"><a >Log-in</a></li>
+    <li><div id="try"></div></li>
+              </ul>
+            </div>
+            <!-- #Nav Ends -->
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+<!-- #Header Starts -->
+
+<div id="login">
+
+
+    <!-- login form -->
+
+    <form name="loginform" id="loginid" onsubmit="return login()"><br>
+        <div  id ="close2" onclick="cls2()" ><br>&nbsp;&nbsp;X</div>
+        <br><br>
+      <span style="color: black ;font-size: 20px ;margin-left: 20px">   Name:</span>&emsp; &emsp;&emsp; <input id="log_name" type="text" required>
+        <br><br>
+        <span style="color: black ;font-size: 20px ;margin-left: 20px"> Password</span>&emsp; <input type="password" id="log_pass" required>
+        <br><br><br>
+        <input type="submit"  value="submit" id="sbmit2">
+        <div id="msg" style="color:red;margin-left: 30px"></div>
+    </form>
+
+
+</div>
+
+
+<div id="box">
+
+    <!--form starts -->
+
+
+<form name="signupform" id="signupid" method="#" onsubmit="return signup()" >
+    <div  id = "close" onclick="cls()"><br>X</div>
+    <br><br>
+    <span style="color: black ;font-size: 20px ;margin-left: 50px">Name  : </span>&emsp; &emsp;&emsp; &emsp;&emsp; &emsp;  <input type ="text"  class="sp" id="sign_name" required onchange="unique()">
+<br><div id="msg2" ></div>
+    <br>
+    <span style="color: black ;font-size: 20px ;margin-left: 50px">E-mail Id: </span>&emsp;&emsp; &emsp;&emsp; &emsp; <input type="email"  class="sp" required autofocus="on" required id="sign_id">
+<br><br>
+    <span style="color: black ;font-size: 20px ;margin-left: 50px">Phone no:</span>&emsp;&emsp; &emsp; &emsp; &emsp;<input type="tel" class="sp" id="sign_no" required>
+    <br><br>
+    <span style="color: black ;font-size: 20px ;margin-left: 50px">Password  : </span>&emsp; &emsp; &emsp;&emsp;  <input type ="password" class="sp" id="sign_pswrd" required>
+    <br>
+    <br><br>
+    <span style="color: black ;font-size: 20px ;margin-left: 50px">Re-type password: </span> <input type ="password" class="sp" id="sign_newpswrd" required>
+    <br><br>
+    <span style="color: black ;font-size: 20px ;margin-left: 50px">Occupation &emsp; &emsp; &nbsp; &nbsp;</span>
+<select>
+    <option> Job</option>
+    <option>Student</option>
+    <option>Self-employed</option>
+</select><br>
+    <br><br><br>
+
+    <input  id="sbmit" type="submit" value="submit" >
+
+</form>
+</div>
+
+<!-- form ends -->
+
+
+<!-- works -->
+<div id="works"  class=" clearfix grid">
+
+
+
+    <figure class="effect-oscar  wowload fadeIn">
+        <img src="images/Apple-mobiles.jpg" alt="img01" width="600px" height="282px" >
+        <figcaption>
+            <h2>Mobiles</h2>
+            <p>Read reviews of popular/latest mobiles or post reviews according to your user experience about any mobile <br>
+            <a href="mobile.html" >View more</a></p>
+        </figcaption>
+    </figure>
+     <figure class="effect-oscar  wowload fadeInUp">
+        <img src="images/portfolio/2.jpg" alt="img01"  width="600px" height="282px"/>
+        <figcaption>
+            <h2>Events</h2>
+            <p>Read reviews of popular  events or post reviews about any event<br>
+            <a href="events.html" >View more</a></p>
+        </figcaption>
+    </figure>
+     <figure class="effect-oscar  wowload fadeInUp">
+        <img src="images/portfolio/3.jpg" alt="img01"  width="600px" height="282px"/>
+        <figcaption>
+            <h2>music</h2>
+            <p>Read reviews about popular/latest songs or post your opinion about any song.<br>
+            <a href="music.html">View more</a></p>
+        </figcaption>
+    </figure>
+     <figure class="effect-oscar  wowload fadeInUp">
+        <img src="images/nmov.jpg" alt="img01"  width="600px" height="282px"/>
+        <figcaption>
+            <h2 >Movies</h2>
+            <p>Read reviews about latest movies or post your opinion about any movie.<br>
+            <a href="movies.html">View more</a></p>
+        </figcaption>
+    </figure>
+     <figure class="effect-oscar  wowload fadeInUp">
+        <img src="images/food.jpg" alt="img01" width="600px" height="282px"/>
+        <figcaption>
+            <h2>Restaurants and bars</h2>
+            <p>Read review about famous restaurants and post your review about any restaurant<br>
+            <a href="rest.html" >View more</a></p>
+        </figcaption>
+    </figure>
+     
+     <figure class="effect-oscar  wowload fadeInUp">
+        <img src="images/portfolio/6.jpg" alt="img01"  width="600px" height="282px"/>
+        <figcaption>
+            <h2>hotel</h2>
+            <p>Read review about famous hotels and post your review about any hotel<br>
+            <a href="hotel.html">View more</a></p>
+        </figcaption>
+    </figure>
+    <figure class="effect-oscar  wowload fadeInUp">
+        <img src="images/books.jpg" alt="img01"  width="600px" height="282px"/>
+        <figcaption>
+            <h2>Novels</h2>
+            <p>Read which novel is getting what rating among different readers and post your review about any novel<br>
+            <a href="novels.html" >View more</a></p>
+        </figcaption>
+    </figure>
+    <figure class="effect-oscar  wowload fadeInUp">
+        <img src="images/places.jpg" alt="img01" width="600px" height="282px"/>
+        <figcaption>
+            <h2> Tourist Destination</h2>
+            <p>read which tourist place is getting famous  and post ur reviews about any tourist place
+            <br><a href="tourist_places.html">View more</a></p>
+        </figcaption>
+    </figure>
+    <figure class="effect-oscar  wowload fadeInUp">
+        <img src="images/portfolio/9.jpg" alt="img01" width="600px" height="282px"/>
+        <figcaption>
+            <h2>Coffee</h2>
+            <p>Read reviews about some coffee shops or post your views about any coffee shop<br>
+            <a href="coffee.html">View more</a></p>
+        </figcaption>
+    </figure>
+    <!--
+    <figure class="effect-oscar  wowload fadeInUp">
+        <img src="images/portfolio/10.jpg" alt="img01"/>
+        <figcaption>
+            <h2>cameras</h2>
+            <p>Lily likes to play with crayons and pencils<br>
+            <a href="images/portfolio/10.jpg" title="1" data-gallery>View more</a></p>            
+        </figcaption>
+    </figure>
+    <figure class="effect-oscar  wowload fadeInUp">
+        <img src="images/portfolio/11.jpg" alt="img01"/>
+        <figcaption>
+            <h2>design</h2>
+            <p>Lily likes to play with crayons and pencils<br>
+            <a href="images/portfolio/11.jpg" title="1" data-gallery>View more</a></p>            
+        </figcaption>
+    </figure>
+    <figure class="effect-oscar  wowload fadeInUp">
+        <img src="images/portfolio/12.jpg" alt="img01"/>
+        <figcaption>
+            <h2>studio</h2>
+            <p>Lily likes to play with crayons and pencils<br>
+            <a href="images/portfolio/12.jpg" title="1" data-gallery>View more</a></p>            
+        </figcaption>
+    </figure>
+    
+-->
+     
+</div>
+<!-- works -->
+
+
+
+
+
+
+<!-- Cirlce Starts -->
+<div id="about"  class="container spacer about">
+<h2 class="text-center wowload fadeInUp">About us</h2>
+  <div class="row">
+  <div class="col-sm-6 wowload fadeInLeft">
+    <h4><i class="fa fa-desktop"></i> Read Reviews</h4>
+    <p style="font-size: medium">Lets you read reviws on some of the popualar topics like latest mobile,movies etc.It will help you to take decision regarding that product /location
+    wether to go for it  or not.It provide reviews about all categories of products,places at a single site.
+    </p>
+    
+
+  </div>
+  <div class="col-sm-6 wowload fadeInRight">
+  <h4><i class="fa fa-pencil-square-o "></i>Give reviews</h4>
+  <p style="font-size: medium">Lets give you your view about any product,place according to your user experience which helps others to make a decision regarding
+      that particular product .</p>
+  </div>
+  </div>
+</div>
+
+<!-- #Cirlce Ends -->
+
+
+
+<!-- About Starts -->
+<div class="highlight-info">
+<div class="overlay spacer">
+<div class="container">
+<div class="row text-center  wowload fadeInDownBig">
+
+    <div class="col-sm-1 col-xs-1"></div>
+    <!-- Start of SimpleHitCounter Code -->
+    <div class="col-sm-3 col-xs-6" align="center"><br><br><a href="http://www.freecounterstat.com" title="html hit counter code"><img src="http://counter9.01counter.com/private/freecounterstat.php?c=78a0d37453e593664cc68be4dc4ea324" border="0" title="html hit counter code" alt="html hit counter code"></a>
+    </div>
+    <!-- End of SimpleHitCounter Code -->
+<div class="col-sm-3 col-xs-6"></div>
+  <div class="col-sm-3 col-xs-6">
+      <!-- Start FreeOnlineUsers.com -->
+      <br><br><br>
+      <a href="http://www.freeonlineusers.com">
+          <span style="color:#FFFFFF ; font-size: 30px"><script type="text/javascript" src="http://st2.freeonlineusers.com/on3.php?id=1542802"> </script>  Users Online</span></a>
+      <!-- End FreeOnlineUsers.com -->
+  </div>
+
+</div>
+</div>
+</div>
+</div>
+<!-- About Ends -->
+
+
+
+
+
+
+
+<div id="partners" class="container spacer ">
+	<h2 class="text-center  wowload fadeInUp">Some latest reviews</h2>
+  <div class="clearfix">
+      <div class="col-sm-1 col-xs-0 col-lg-0"></div>
+    <div class="col-sm-5 col-xs-1 col-lg-4 col-lg-offset-1 partners  wowload fadeInLeft">
+        <img src="images/rev.jpg" style="height: 200px" >
+    </div>
+      <div class="col-xs-3 "></div>
+    <div class="col-sm-6 col-xs-7 col-lg-6">
+
+
+    <div id="carousel-testimonials" class="carousel slide testimonails  wowload fadeInRight" data-ride="carousel">
+    <div class="carousel-inner">  
+      <div class="item active animated bounceInRight row">
+      <div class="animated slideInLeft col-xs-1 col-lg-2"><img alt="portfolio" src="images/no-image-icon-md.png" width="100" class="img-circle img-responsive"></div>
+      <div  id="person1" class="col-xs-6 col-lg-8" style="font-size:20px ">
+     <!-- <p> I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. </p>
+      <span>Angel Smith - <b>eshop Canada</b></span>
+      -->
+      </div>
+      </div>
+      <div class="item  animated bounceInRight row">
+      <div class="animated slideInLeft col-xs-1 col-lg-2"><img alt="portfolio" src="images/no-image-icon-md.png" width="100" class="img-circle img-responsive"></div>
+      <div  id="person2" class="col-xs-6 col-lg-8" style="font-size:20px ">
+      <!--<p>No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>
+      <span>John Partic - <b>Crazy Pixel</b></span>
+      -->
+      </div>
+      </div>
+      <div class="item  animated bounceInRight row ">
+      <div class="animated slideInLeft  col-xs-1 col-lg-2"><img alt="portfolio" src="images/no-image-icon-md.png" width="100" class="img-circle img-responsive"></div>
+      <div  id="person3" class="col-xs-4 col-lg-4" style="font-size:20px ">
+      <!--<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue.</p>
+      <span>Harris David - <b>Jet London</b></span>
+      -->
+      </div>
+      </div>
+  </div>
+
+   <!-- Indicators -->
+   	<ol class="carousel-indicators">
+    <li data-target="#carousel-testimonials" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-testimonials" data-slide-to="1"></li>
+    <li data-target="#carousel-testimonials" data-slide-to="2"></li>
+  	</ol>
+  	<!-- Indicators -->
+  </div>
+
+
+
+    </div>
+  </div>
+
+
+<!-- team -->
+<h3 class="text-center  wowload fadeInUp">About  developer</h3>
+<p class="text-center  wowload fadeInLeft">Its only hard work that can make everything possible</p>
+<div class="row grid team  wowload fadeInUpBig">
+    <div class=" col-sm-1 col-xs-2">
+        </div>
+	<div class=" col-sm-6 col-xs-4 col-md-4 col-lg-4">
+	<figure class="effect-chico">
+        <img src="images/IMG_20160804_183610.jpg" alt="img01" class="img-responsive"  />
+        <figcaption>
+            <p><b>Pujasvi Rakheja</b><br> Pursuing B.Tech(3rd yr)<br><br> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a></p>
+        </figcaption>
+    </figure>
+    </div>
+    <div class="col-xs-1"></div>
+
+    <div class=" col-sm-5 col-xs-4">
+
+                <p><b>Pujasvi Rakheja</b><br> Student<br><br> HI, i am Pujasvi. I am an engineering student.I am presently in third yr.
+                I am very fond of making websites.I love programming too.A good learner ,hardworking ,passionate is what makes me different.
+                </p>
+
+    </div>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Contact Starts-->
+<div id="contact" class="spacer">
+
+<div class="container contactform center">
+<h2 class="text-center  wowload fadeInUp">Give us your important feedback</h2>
+  <div class="row wowload fadeInLeftBig">      
+      <div class="col-sm-6 col-sm-offset-3 col-xs-12">
+          <form method="#" onsubmit="return feedback() " name="fbform">
+        <input required type="text" placeholder="Name" id="fb_name">
+        <input required type="email" placeholder="Email-id" id="fb_id">
+        <textarea  required rows="5" placeholder="Message" id="fb_view"></textarea>
+        <input type="submit" class="btn btn-primary" value="send">
+          </form>
+      </div>
+  </div>
+
+
+
+</div>
+</div>
+<!--Contact Ends-->
+
+
+
+<!-- Footer Starts -->
+<div class="footer text-center spacer">
+<p class="wowload flipInX"><a href="https://www.facebook.com/public/Pujasvi-Rakheja"><i class="fa fa-facebook fa-2x"></i></a> <a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram fa-2x"></i></a> <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter fa-2x"></i></a> <a href="https://in.linkedin.com/in/pujasvi-rakheja-301b2a10b"><i class=" fa fa-linkedin-square fa-2x"></i></a> </p>
+Copyright  &copy; PUJASVI  All rights reserved.
+</div>
+<!-- # Footer Ends -->
+<a href="#works" class="gototop "><i class="fa fa-angle-up  fa-3x"></i></a>
+
+
+
+
+
+<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+    <!-- The container for the modal slides -->
+    <div class="slides"></div>
+    <!-- Controls for the borderless lightbox -->
+    <h3 class="title">Title</h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <!-- The modal dialog, which will be used to wrap the lightbox content -->    
+</div>
+
+
+
+<!-- jquery -->
+<script src="assets/jquery.js"></script>
+
+<!-- wow script -->
+<script src="assets/wow/wow.min.js"></script>
+
+
+<!-- boostrap -->
+<script src="assets/bootstrap/js/bootstrap.js" type="text/javascript" ></script>
+
+<!-- jquery mobile -->
+<script src="assets/mobile/touchSwipe.min.js"></script>
+<script src="assets/respond/respond.js"></script>
+
+<!-- gallery -->
+<script src="assets/gallery/jquery.blueimp-gallery.min.js"></script>
+
+<!-- custom script -->
+<script src="assets/script.js"></script>
+
+
+<script type="text/javascript">
+
+
+
+
+</script>
+
+</body>
+</html>

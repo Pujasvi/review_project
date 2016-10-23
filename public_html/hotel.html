@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>HOTELS</title>
+
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- font awesome -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+
+    <!-- animate.css -->
+    <link rel="stylesheet" href="assets/animate/animate.css" />
+    <link rel="stylesheet" href="assets/animate/set.css" />
+
+    <!-- gallery -->
+    <link rel="stylesheet" href="assets/gallery/blueimp-gallery.min.css">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon2.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon2.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="assets/style.css">
+
+
+    <style>
+
+        .signup:hover{
+            background-color: white;
+
+        }
+        #box,#login{
+            overflow:auto;
+            z-index:1;
+            position: fixed;
+
+            display: none;
+            height: 100%;
+            background-color: rgba(1,1,1,0.6);
+            width: 100%;
+        }
+        #signupid{
+            border:  1px solid  white;
+            height:600px;
+            margin:  130px 400px ;
+            background-image:url("images/back.jpg");
+            background-size: contain;
+            border-radius: 10px;
+
+        }
+
+        #loginid{
+            height:350px;
+            width:350px;
+
+            background-image: url("images/back.jpg");
+            background-size:contain;
+
+
+
+
+            margin-left:1050px;
+            margin-top:0px;
+
+        }
+        #close{
+            margin-top:20px ;
+            margin-left:500px;
+            background-color:white;
+            font-size: 30px;
+            width:30px ;
+            height:40px;
+        }
+        #close2{
+            z-index:5;
+            height:40px;
+            width:50px;
+            /* background-color:red;
+             */font-size:30px;
+            margin-left:250px ;
+            margin-top:100px;
+            color:black;
+        }
+
+
+        #close:hover{
+
+            background-color:black;
+            color:white;
+
+        }
+
+        #close2:hover{
+
+            background-color:black;
+            color:white;
+
+        }
+
+        #log:hover{
+            background-color: white;
+
+        }
+        #hot_readsome{
+            font-size: 20px;
+        }
+        #hot_readall{
+            font-size: 20px
+        }
+        .my{
+            display: flex;
+            flex-direction: row;
+
+        }
+        .my1{
+            margin-left:150px;
+            font-size: 60px ;
+            background-color:lightgray;
+            height:400px;
+            width:500px;
+        }
+
+        .my2{
+            margin-left: 100px;
+            width:500px;
+            font-size: 60px;
+            background-color:#86cdd7 ;
+            height:400px;
+        }
+
+
+        .my1:hover{
+            cursor: pointer;
+            background-color: darkgrey;
+
+        }
+        .my2:hover{
+            cursor: pointer;
+            background-color:dodgerblue;
+        }
+        #hot_search{
+            height:50px;
+            margin-left: 100px;
+        }
+        #search_box{
+            height: 50px
+        }
+        .btn1{
+            height:50px;
+            margin-left: 150px
+        }
+        .btn2{
+            height:50px;
+            margin-left: 150px
+        }
+        #all{
+            margin-top:0px ;
+            margin-left: 30px;
+
+            font-size: 30px;
+            height:200px;
+            overflow: hidden;
+            padding: 30px;
+
+        }
+        #some{
+            margin-top:0px ;
+            margin-left: 30px;
+
+            font-size: 30px;
+            height:200px;
+            overflow: hidden;
+            padding: 30px;
+        }
+
+        @media(min-width: 1200px) and (max-width: 1300px)
+        {
+
+            #hot_search{
+                height:40px;
+                margin-left: 130px;
+                width:1000px;
+            }
+            #hot_readsome{
+                width:450px;
+                margin-left: 130px;
+            }
+            #hot_readall{
+
+                width:450px;
+                margin-left: 70px;
+            }
+
+        }
+        @media (min-width: 980px) and (max-width: 1199px) {
+            #hot_search{
+                height:40px;
+                margin-left: 0px;
+            }
+            #all{
+                font-size: 30px;
+
+            }
+
+            .my1{
+                margin-left: 50px;
+            }
+            #some{
+                font-size: 30px;
+            }
+
+            #search_box{
+                margin-left: 500px;
+                margin-top: 30px;
+            }
+            #hot_readall{
+                font-size: 18px;
+            }
+            #hot_readsome{
+                font-size: 18px;
+                margin-left: 150px;
+            }
+        }
+        @media (min-width: 768px) and (max-width: 979px) {
+            #hot_search{
+                height:40px;
+                margin-left: 0px;
+            }
+            #all{
+                font-size: 20px;
+            }
+            #some{
+                font-size: 20px;
+            }
+            .my1{
+                margin-left: 50px;
+            }
+
+            .btn1{
+                margin-left: 100px;
+            }
+            .btn2{
+                margin-left: 100px;
+            }
+
+            #search_box{
+                margin-left:450px;
+                margin-top: 30px;
+            }
+            #hot_readall{
+                margin-left: 0px;
+                width: 330px;
+                font-size: 17px;
+            }
+            #hot_readsome{
+                margin-left: 40px;
+                font-size: 17px;
+            }
+        }
+
+        @media (min-width: 479px) and (max-width: 767px) {
+            #hot_search {
+
+                height: 30px;
+                margin-left: 100px;
+                width: 500px;
+
+            }
+
+            #all {
+                font-size: 17px;
+            }
+
+            #some {
+                font-size: 17px;
+            }
+
+            .my1 {
+                margin-left: 50px;
+                width: 350px;
+
+            }
+
+            .my2 {
+                width: 350px;
+                margin-left: 100px;
+            }
+
+            #search_box {
+                margin-left:300px;
+                margin-top: 0px;
+            }
+
+            .btn1 {
+                margin-left: 50px;
+            }
+
+            .btn2 {
+                margin-left: 50px;
+            }
+
+            #hot_readall {
+                font-size: 15px;
+                margin-left:-10px;
+                width:250px;
+            }
+
+            #hot_readsome {
+                font-size: 15px;
+                margin-left: 50px;
+                width: 250px;
+
+            }
+        }
+
+        @media (max-width: 479px) {
+
+            #hot_readall{
+                font-size: 15px ;
+                margin-left: 50px;
+            }
+            #hot_readsome{
+                font-size: 15px ;
+                margin-left:110px;
+            }
+
+
+            #hot_search{
+
+                height:30px;
+                margin-left: 10px;
+                width:200px;
+
+            }
+            #search_box{
+                margin-left: 0px;
+                margin-top: 0px;
+            }
+
+            #all{
+                font-size: 20px;
+            }
+            #some{
+                font-size: 20px;
+            }
+            .btn1{
+                margin-left: 100px;
+            }
+            .btn2{
+                margin-left: 100px;
+            }
+            .my4{
+
+                height:220px;
+                width:300px;
+            }
+            .my5{
+                height:300px;
+                width:300px;
+            }
+            .my{
+                display: block;
+            }
+            .my1{
+                margin-left:0px ;
+                width:323px;
+            }
+            .my2{
+                margin-left:0px ;
+                width:323px;
+            }
+        }
+
+
+    </style>
+
+    <script type="text/javascript" src="js/myjs.js"></script>
+    <script type="text/javascript" src="js/mob.js"></script>
+
+</head>
+<body>
+<div class="topbar animated fadeInLeftBig"></div>
+
+<!-- Header Starts -->
+<div class="navbar-wrapper">
+    <div class="container">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="top-nav">
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- Logo Starts -->
+                    <a class="navbar-brand" href="#home"><img src="logo.png" alt="logo" style="margin-top:-70px ;margin-left:-100px"></a>
+                    <!-- #Logo Ends -->
+
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+
+                <!-- Nav Starts -->
+                <div class="navbar-collapse  collapse">
+                    <ul class="nav navbar-nav navbar-right scroll">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li ><a href="#about">About</a></li>
+                        <li ><a href="#partners">Latest reviews</a></li>
+
+                        <li  onclick="mb()" class="signup"><a >Sign-up</a>
+
+                        </li>
+
+                        <li  onclick="log1()" id="log"><a >Log-in</a></li>
+                        <li><div id="try"></div></li>
+
+                    </ul>
+                </div>
+                <!-- #Nav Ends -->
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div id="login">
+
+
+    <!-- login form -->
+
+    <form name="loginform" id="loginid" onsubmit="return login()"><br>
+        <div  id ="close2" onclick="cls2()" ><br>&nbsp;&nbsp;X</div>
+        <br><br>
+        <span style="color: black ;font-size: 20px ;margin-left: 20px">   Name:</span>&emsp; &emsp;&emsp; <input id="log_name" type="text" required>
+        <br><br>
+        <span style="color: black ;font-size: 20px ;margin-left: 20px"> Password</span>&emsp; <input type="password" id="log_pass" required>
+        <br><br><br>
+        <input type="submit" style="margin-left:250px " value="submit">
+        <div id="msg" style="color:red;margin-left: 30px"></div>
+    </form>
+
+
+</div>
+
+
+<div id="box">
+
+    <!--form starts -->
+
+
+    <form name="signupform" id="signupid" method="#" onsubmit="return signup()" >
+        <div  id = "close" onclick="cls()"><br>X</div>
+        <br><br>
+        <span style="color: black ;font-size: 20px ;margin-left: 50px">Name  : </span>&emsp; &emsp;&emsp; &emsp;&emsp; &emsp;  <input type ="text" size="30" style="height: 40px" id="sign_name" required onchange="unique()">
+        <br><div id="msg2" ></div>
+        <br>
+        <span style="color: black ;font-size: 20px ;margin-left: 50px">E-mail Id: </span>&emsp;&emsp; &emsp;&emsp; &emsp; <input type="email" size="30" style="height:40px" required autofocus="on" required id="sign_id">
+        <br><br>
+        <span style="color: black ;font-size: 20px ;margin-left: 50px">Phone no:</span>&emsp;&emsp; &emsp; &emsp; &emsp;<input type="tel" size="30" style="height: 40px" id="sign_no" required>
+        <br><br>
+        <span style="color: black ;font-size: 20px ;margin-left: 50px">Password  : </span>&emsp; &emsp; &emsp;&emsp;  <input type ="password" size="30" style="height: 40px" id="sign_pswrd" required>
+        <br>
+        <br><br>
+        <span style="color: black ;font-size: 20px ;margin-left: 50px">Re-type password: </span> <input type ="password" size="30" style="height: 40px" id="sign_newpswrd" required>
+        <br><br>
+        <span style="color: black ;font-size: 20px ;margin-left: 50px">Occupation &emsp; &emsp; &nbsp; &nbsp;</span>
+        <select>
+            <option> Job</option>
+            <option>Student</option>
+            <option>Self-employed</option>
+        </select><br>
+        <br><br><br>
+
+        <input  id="sbmit" type="submit" value="submit" style="margin-left: 450px" >
+
+    </form>
+</div>
+
+<!-- form ends -->
+
+<br><br><br><br>
+<h3 class="text-center  wowload fadeInUp">Give your views about any hotel.</h3>
+<p class="text-center  wowload fadeInLeft">Because its your words that matters a  lot for others and help them to decide which hotel will be best for them</p>
+<br><br><br><br>
+
+<div class="row grid team  wowload fadeInUpBig" >
+    <div class=" col-sm-0 col-xs-0 col-lg-1 col-md-1">
+    </div>
+    <div class=" col-sm-8 col-xs-8 col-md-5 col-lg-5 my4">
+        <figure class="effect-chico">
+            <img src="images/hotel.jpg" alt="img01" class="img-responsive"/>
+            <figcaption>
+                <p><b>HOTELS</b><br><br> </p>
+            </figcaption>
+        </figure>
+    </div>
+
+
+    <div  class="col-lg-0"></div>
+
+    <div class=" col-sm-4 col-md-4 col-xs-4 col-lg-5 my5" style="background-color:lightgray">
+
+        <span style="background-color:#86cdd7;font-size: 25px;">GIVE REVIEWS</span>
+        <br>
+        <form method="#" onsubmit="return hotel() " name="hotelform"><br><br><br>
+            <div id="vr" style="color: red"></div>
+            HOTEL NAME       &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <input  required type="text" id="hot_name"><br><br>
+            HOTEL LOCATION    &nbsp;&nbsp;&nbsp; <input  required type="text" id="hot_loc"><br><br>
+            YOUR VIEWS     &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<textarea rows="6" id="hot_views" required></textarea><br><br><br>
+            <input type="submit"  value="submit" style="margin-left:30px ">
+        </form>
+
+    </div>
+
+
+</div>
+
+
+<!-- lower -->
+<br><br><br><br>
+<h3 class="text-center  wowload fadeInUp">READ REVIEWS OF OTHER USERS</h3>
+<p class="text-center  wowload fadeInLeft">Helps you to know which hotel is good for you</p>
+
+
+<br><br>
+&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<form onsubmit=" return hot_srch1()" name="hotsrchform">
+<input required type="text" id="hot_search" placeholder="ENTER ANY PARTICULAR HOTEL NAME YOU WANT TO READ ABOUT" size =140  >
+    <input type="submit" value="search" id="search_box">
+</form>
+    <br><br><br><br>
+
+<div id="hot_srch2" style="margin-left:100px "></div>
+
+<div class="my" >
+
+
+    <div class="my1" ><br><br><br><br>
+        <div id="all"  >READ ALL REVIEWS
+            <br><br><br><br></div><input class="btn1" type="button" onclick="hot_read_all()" value="click" >
+
+    </div>
+
+    <div class="my2" ><br><br><br><br>
+        <div  id="some" >READ LATEST REVIEWS<br><br><br><br>
+        </div> <input type="button" class="btn2" onclick="hot_read_some()" value="click" >
+
+
+    </div>
+
+
+</div>
+
+<br><br><br><br><br><br>
+<div class="row">
+    <div class=" col-sm-1 col-xs-2 col-lg-1">
+    </div>
+
+    <div  class=" col-sm-6 col-xs-6 col-md-4 col-lg-5 "  id="hot_readall"style="background-color: lightgray   ;"></div>
+    <div class=" col-sm-5 col-xs-6 col-lg-5" id="hot_readsome" style="background-color:#86cdd7 ;" ></div>
+
+</div>
+<br><br><br>
+
+
+<!-- ends -->
+
+
+</body>
+</html>
+
+
+
+
+
+<script type="text/javascript">
+
+    mb=function(){
+        var box=document.getElementById("box");
+        box.style.display="block";
+
+        var modal = document.getElementById('box');
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+
+    }
+    cls =function(){
+
+        var box=document.getElementById("box");
+        box.style.display="none";
+
+    }
+
+    cls2 =function(){
+
+        var box=document.getElementById("login");
+        box.style.display="none";
+
+    }
+
+    log =function(){
+
+        var box=document.getElementById("login");
+        box.style.display="block";
+        var modal2 = document.getElementById('login');
+        window.onclick = function(event) {
+            if (event.target == modal2) {
+                modal2.style.display = "none";
+            }
+        }
+
+
+    }
+
+
+
+
+
+
+</script>
+<script src="assets/jquery.js"></script>
+
+</body>
+</html>
